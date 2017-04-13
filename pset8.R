@@ -25,5 +25,8 @@ plotDispEsts(dex, 1)
 
 ## Get FDR
 fdr = res$padj
-numGeneBelow5Percent = sum(fdr<0.05, na.rm=TRUE)
-numGeneBelow5Percent
+pvalue = res$pvalue
+numGeneBelow5PercentFDR = sum(fdr<0.05, na.rm=TRUE)
+numGeneBelow5PercentFDR
+numGeneBelow5PercentPvalue = sum(pvalue<0.05, na.rm=TRUE)
+numGeneBelow5PercentPvalue
